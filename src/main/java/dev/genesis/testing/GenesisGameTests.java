@@ -76,6 +76,15 @@ public final class GenesisGameTests {
         h.assertTrue(!d.state.transformed()&&d.state.installed&&d.state.transformationCooldown>0,"Exhaustion did not restore human state");h.succeed();
     }
     @GameTest(template="empty",timeoutTicks=200)
+    public static void movement_ability_uses_jump_animation(GameTestHelper h){
+        var p=FakePlayerFactory.get(h.getLevel(),new GameProfile(UUID.randomUUID(),"GenesisMovement"));
+        var pos=h.absolutePos(new net.minecraft.core.BlockPos(3,2,3));p.setPos(pos.getX()+.5,pos.getY(),pos.getZ()+.5);
+        var d=GenesisCoreData.get(p);d.state.install();d.state.addXp(250);d.state.discover("metal");d.state.discover("colony");
+        TransformationManager.transform(p,"colonyx",false);PalladiumPowerBridge.tickForValidation(p);d.state.abilityLock=0;
+        dev.genesis.abilities.AbilityManager.request(p,4);
+        h.assertTrue(d.movementTicks>0&&d.state.cooldowns[4]>0&&d.animation==7,"Movement ability did not activate with its jump animation");h.succeed();
+    }
+    @GameTest(template="empty",timeoutTicks=200)
     public static void ferronox_projectile_and_ammo(GameTestHelper h){
         var p=FakePlayerFactory.get(h.getLevel(),new GameProfile(UUID.randomUUID(),"GenesisShot"));
         var pos=h.absolutePos(new net.minecraft.core.BlockPos(3,2,3));p.setPos(pos.getX()+.5,pos.getY(),pos.getZ()+.5);

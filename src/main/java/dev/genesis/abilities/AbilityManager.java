@@ -30,7 +30,7 @@ public final class AbilityManager {
             default -> false;
         };
         if(!ok)return;
-        s.pay(slot,cost,CD[slot]);d.animation=slot==1?2:slot==3?3:1;d.animationTicks=slot==3?40:15;
+        s.pay(slot,cost,CD[slot]);d.animation=slot==4?7:slot==1?2:slot==3?3:1;d.animationTicks=slot==3?40:15;
         PalladiumPowerBridge.flags(p);CoreNetwork.sync(p);
         p.level().playSound(null,p.blockPosition(),SoundEvents.AMETHYST_BLOCK_CHIME,SoundSource.PLAYERS,.45f,.6f+slot*.15f);
         if(s.energy<=0)TransformationManager.revert(p);
