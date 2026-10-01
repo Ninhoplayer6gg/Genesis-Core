@@ -603,6 +603,77 @@
           }
         }
       }
+    },
+    "magnetic_shard": {
+      "loop": true,
+      "animation_length": 0.6,
+      "bones": {
+        "right_arm": {
+          "rotation": {
+            "0": [0, 0, 0],
+            "0.15": [-82, 0, -12],
+            "0.6": [0, 0, 0]
+          }
+        },
+        "right_field": {
+          "rotation": {
+            "0": [0, 0, 0],
+            "0.3": [0, 0, 35],
+            "0.6": [0, 0, 0]
+          }
+        }
+      }
+    },
+    "magnetic_polarity": {
+      "loop": true,
+      "animation_length": 0.8,
+      "bones": {
+        "left_arm": {
+          "rotation": [-18, 0, -42]
+        },
+        "right_arm": {
+          "rotation": [-18, 0, 42]
+        },
+        "left_field": {
+          "rotation": {
+            "0": [0, 0, -22],
+            "0.4": [0, 0, 22],
+            "0.8": [0, 0, -22]
+          }
+        },
+        "right_field": {
+          "rotation": {
+            "0": [0, 0, 22],
+            "0.4": [0, 0, -22],
+            "0.8": [0, 0, 22]
+          }
+        }
+      }
+    },
+    "magnetic_lift": {
+      "loop": true,
+      "animation_length": 0.8,
+      "bones": {
+        "body": {
+          "position": {
+            "0": [0, 0, 0],
+            "0.4": [0, 0.45, 0],
+            "0.8": [0, 0, 0]
+          }
+        },
+        "left_field": {
+          "rotation": [0, 0, -28]
+        },
+        "right_field": {
+          "rotation": [0, 0, 28]
+        },
+        "left_leg": {
+          "rotation": [-12, 0, -8]
+        },
+        "right_leg": {
+          "rotation": [-12, 0, 8]
+        }
+      }
     }
   }
 }

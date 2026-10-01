@@ -76,13 +76,33 @@ public final class GenesisGameTests {
         h.assertTrue(!d.state.transformed()&&d.state.installed&&d.state.transformationCooldown>0,"Exhaustion did not restore human state");h.succeed();
     }
     @GameTest(template="empty",timeoutTicks=200)
-    public static void movement_ability_uses_jump_animation(GameTestHelper h){
+    public static void movement_ability_uses_species_animation(GameTestHelper h){
         var p=FakePlayerFactory.get(h.getLevel(),new GameProfile(UUID.randomUUID(),"GenesisMovement"));
         var pos=h.absolutePos(new net.minecraft.core.BlockPos(3,2,3));p.setPos(pos.getX()+.5,pos.getY(),pos.getZ()+.5);
         var d=GenesisCoreData.get(p);d.state.install();d.state.addXp(250);d.state.discover("metal");d.state.discover("colony");
         TransformationManager.transform(p,"colonyx",false);PalladiumPowerBridge.tickForValidation(p);d.state.abilityLock=0;
         dev.genesis.abilities.AbilityManager.request(p,4);
-        h.assertTrue(d.movementTicks>0&&d.state.cooldowns[4]>0&&d.animation==7,"Movement ability did not activate with its jump animation");h.succeed();
+        var visual=d.visualSync();var observer=new GenesisCoreData();observer.load(visual);
+        h.assertTrue(d.movementTicks>0&&d.state.cooldowns[4]>0&&d.animation==14,"Colonyx movement ability did not activate its climbing feedback");
+        h.assertTrue(visual.getInt("Movement")==d.movementTicks&&observer.movementTicks==d.movementTicks,"Movement state was not synchronized for observers");h.succeed();
+    }
+    @GameTest(template="empty",timeoutTicks=200)
+    public static void movement_energy_exhaustion_reverts_immediately(GameTestHelper h){
+        var p=FakePlayerFactory.get(h.getLevel(),new GameProfile(UUID.randomUUID(),"GenesisMoveDrain"));
+        var pos=h.absolutePos(new net.minecraft.core.BlockPos(3,2,3));p.setPos(pos.getX()+.5,pos.getY(),pos.getZ()+.5);
+        var d=GenesisCoreData.get(p);d.state.install();TransformationManager.transform(p,"adaptaris",false);
+        d.movementTicks=40;d.state.energy=dev.genesis.core.CoreBalance.baseDrain*dev.genesis.config.CoreConfig.DRAIN.get()+.5;p.tickCount=20;
+        CoreEvents.tick(new net.minecraftforge.event.TickEvent.PlayerTickEvent(net.minecraftforge.event.TickEvent.Phase.END,p));
+        h.assertTrue(!d.state.transformed()&&d.state.energy==0&&!p.getTags().contains("genesis_leap"),"Movement drain left the player transformed or the leap power active at zero energy");h.succeed();
+    }
+    @GameTest(template="empty",timeoutTicks=200)
+    public static void ferronox_polarity_has_species_feedback(GameTestHelper h){
+        var p=FakePlayerFactory.get(h.getLevel(),new GameProfile(UUID.randomUUID(),"GenesisPolarity"));
+        var pos=h.absolutePos(new net.minecraft.core.BlockPos(3,2,3));p.setPos(pos.getX()+.5,pos.getY(),pos.getZ()+.5);
+        var d=GenesisCoreData.get(p);d.state.install();d.state.addXp(250);d.state.discover("metal");
+        TransformationManager.transform(p,"ferronox",false);PalladiumPowerBridge.tickForValidation(p);d.state.abilityLock=0;
+        dev.genesis.abilities.AbilityManager.request(p,1);
+        h.assertTrue(d.animation==9&&d.state.cooldowns[1]>0,"Ferronox polarity did not activate its magnetic feedback");h.succeed();
     }
     @GameTest(template="empty",timeoutTicks=200)
     public static void ferronox_projectile_and_ammo(GameTestHelper h){

@@ -30,9 +30,17 @@ public final class AbilityManager {
             default -> false;
         };
         if(!ok)return;
-        s.pay(slot,cost,CD[slot]);d.animation=slot==4?7:slot==1?2:slot==3?3:1;d.animationTicks=slot==3?40:15;
+        s.pay(slot,cost,CD[slot]);d.animation=animation(s.form,slot);d.animationTicks=slot==3?40:15;
         PalladiumPowerBridge.flags(p);CoreNetwork.sync(p);
         p.level().playSound(null,p.blockPosition(),SoundEvents.AMETHYST_BLOCK_CHIME,SoundSource.PLAYERS,.45f,.6f+slot*.15f);
         if(s.energy<=0)TransformationManager.revert(p);
+    }
+    private static int animation(String form,int slot) {
+        return switch(form) {
+            case "adaptaris" -> switch(slot){case 1->2;case 2->8;case 3->3;case 4->7;default->1;};
+            case "ferronox" -> switch(slot){case 0->10;case 1->9;case 2->2;case 3->3;case 4->11;default->1;};
+            case "colonyx" -> switch(slot){case 0->12;case 1->2;case 2->13;case 3->3;case 4->14;default->1;};
+            default -> 1;
+        };
     }
 }

@@ -3701,6 +3701,104 @@
           ]
         }
       }
+    },
+    {
+      "name": "regeneration",
+      "uuid": "09a59a45-5e83-588f-b53e-7aa5e31ddbda",
+      "loop": "loop",
+      "length": 0.8,
+      "animators": {
+        "10a2fb73-24b9-52b4-8960-4435f3b43055": {
+          "name": "body",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "scale",
+              "time": 0.0,
+              "interpolation": "linear",
+              "uuid": "df0738e3-1424-59fe-829e-a5e1abf1b4bb",
+              "data_points": [
+                {
+                  "x": "1",
+                  "y": "1",
+                  "z": "1"
+                }
+              ]
+            },
+            {
+              "channel": "scale",
+              "time": 0.4,
+              "interpolation": "linear",
+              "uuid": "c3eb8920-43e6-5628-bd2c-22b6f5182c3d",
+              "data_points": [
+                {
+                  "x": "1.035",
+                  "y": "1.025",
+                  "z": "1.035"
+                }
+              ]
+            },
+            {
+              "channel": "scale",
+              "time": 0.8,
+              "interpolation": "linear",
+              "uuid": "9c12c2d9-c72f-58af-84d1-f3aa68c1e793",
+              "data_points": [
+                {
+                  "x": "1",
+                  "y": "1",
+                  "z": "1"
+                }
+              ]
+            }
+          ]
+        },
+        "ade87612-2925-5713-971a-01b0e6e910ce": {
+          "name": "spine",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0.0,
+              "interpolation": "linear",
+              "uuid": "1bef55db-cd41-5fb4-96af-0b3616bf50c3",
+              "data_points": [
+                {
+                  "x": "0",
+                  "y": "0",
+                  "z": "0"
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.4,
+              "interpolation": "linear",
+              "uuid": "e21c846f-c3b1-57e8-a88c-70fe10c9d2bc",
+              "data_points": [
+                {
+                  "x": "8",
+                  "y": "0",
+                  "z": "0"
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.8,
+              "interpolation": "linear",
+              "uuid": "ef010b8f-a3db-5daa-9107-550f1f454850",
+              "data_points": [
+                {
+                  "x": "0",
+                  "y": "0",
+                  "z": "0"
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ],
   "textures": [
