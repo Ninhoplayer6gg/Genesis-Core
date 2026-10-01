@@ -1,0 +1,124 @@
+{
+  "name": "Ferronox",
+  "icon": "genesis:genesis_core",
+  "background": "minecraft:textures/block/blackstone.png",
+  "abilities": {
+    "armor": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.armor",
+      "amount": 4,
+      "operation": 0,
+      "uuid": "8d4af5e0-49c8-5659-9a7a-fd494097b660",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "speed": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": 0.015,
+      "operation": 0,
+      "uuid": "dd9723ec-40d8-5337-97c8-1c6348608438",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "damage": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": 2,
+      "operation": 0,
+      "uuid": "ebf59957-2171-5113-9475-e7ee87139031",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "guard": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.knockback_resistance",
+      "amount": 0.8,
+      "operation": 0,
+      "uuid": "0156d9c3-139a-5301-b243-f45e54bc40ce",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_shield"
+          }
+        ]
+      }
+    },
+    "orbital_shard": {
+      "type": "palladium:projectile",
+      "entity_type": "palladium:custom_projectile",
+      "velocity": 2.4,
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:false"
+          }
+        ]
+      },
+      "entity_data": {
+        "Damage": 7,
+        "Gravity": 0.025,
+        "Lifetime": 80,
+        "DieOnEntityHit": true,
+        "DieOnBlockHit": true,
+        "Appearances": [
+          {
+            "Type": "item",
+            "Item": "minecraft:iron_nugget"
+          }
+        ],
+        "Tags": [
+          "genesis_projectile"
+        ]
+      }
+    },
+    "flight": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:flight_speed",
+      "amount": 0.045,
+      "operation": 0,
+      "uuid": "9f3abe58-0a5c-5f0a-af65-73d7305e1a13",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_lift"
+          }
+        ]
+      }
+    },
+    "flex": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:flight_flexibility",
+      "amount": 1,
+      "operation": 0,
+      "uuid": "fb57097f-4cc7-5444-b860-951c44fe6180",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_lift"
+          }
+        ]
+      }
+    },
+    "fall": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:fall_resistance",
+      "amount": 2,
+      "operation": 0,
+      "uuid": "35ddaf3c-0992-5a00-a32c-82cce5facc59",
+      "hidden": true,
+      "hidden_in_bar": true
+    }
+  }
+}

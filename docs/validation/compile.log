@@ -1,0 +1,71 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+Welcome to Gradle 8.8!
+
+Here are the highlights of this release:
+ - Running Gradle on Java 22
+ - Configurable Gradle daemon JVM
+ - Improved IDE performance for large projects
+
+For more details see https://docs.gradle.org/8.8/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Task :compileJava
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+Setting up MCP environment
+Initializing steps
+Executing steps
+ > Running 'downloadManifest'
+ > Running 'downloadJson'
+ > Running 'downloadClient'
+ > Running 'downloadServer'
+ > Running 'extractServer'
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+ > Running 'downloadClientMappings'
+ > Running 'mergeMappings'
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+ > Running 'stripClient'
+ > Running 'stripServer'
+ > Running 'merge'
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+ > Running 'listLibraries'
+ > Running 'rename'
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+Stopping at requested step: /workspace/scratch/e634ff68d944/tools-cache/gradle-home/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+[03:21:21] [main/INFO]: Writing debug log file accesstransform.log
+[03:21:21] [main/INFO]: Access Transformer processor running version 8.2.14
+[03:21:21] [main/INFO]: Command line arguments [--inJar, /workspace/scratch/e634ff68d944/tools-cache/gradle-home/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22/forge-1.20.1-47.3.22-injected.jar, --outJar, /workspace/scratch/e634ff68d944/tools-cache/gradle-home/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /workspace/scratch/e634ff68d944/genesis-core/build/_atJar_4/parent_at.cfg]
+[03:21:21] [main/INFO]: Reading from /workspace/scratch/e634ff68d944/tools-cache/gradle-home/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22/forge-1.20.1-47.3.22-injected.jar
+[03:21:21] [main/INFO]: Writing to /workspace/scratch/e634ff68d944/tools-cache/gradle-home/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar
+[03:21:21] [main/INFO]: Transformer file /workspace/scratch/e634ff68d944/genesis-core/build/_atJar_4/parent_at.cfg
+[03:21:21] [main/WARN]: Found existing output jar /workspace/scratch/e634ff68d944/tools-cache/gradle-home/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar, overwriting
+[03:21:25] [main/INFO]: JAR transformation complete /workspace/scratch/e634ff68d944/tools-cache/gradle-home/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar
+Creating SRG -> MCP TSRG
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+/workspace/scratch/e634ff68d944/genesis-core/src/main/java/dev/genesis/GenesisCore.java:20: warning: [removal] get() in FMLJavaModLoadingContext has been deprecated and marked for removal
+        var bus=FMLJavaModLoadingContext.get().getModEventBus();
+                                        ^
+/workspace/scratch/e634ff68d944/genesis-core/src/main/java/dev/genesis/GenesisCore.java:22: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER,CoreConfig.SPEC);
+                         ^
+/workspace/scratch/e634ff68d944/genesis-core/src/main/java/dev/genesis/core/CoreEvents.java:47: warning: [removal] Size in EntityEvent has been deprecated and marked for removal
+    @SubscribeEvent public static void size(EntityEvent.Size e) {
+                                                       ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 warnings
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 9m 5s
+1 actionable task: 1 executed

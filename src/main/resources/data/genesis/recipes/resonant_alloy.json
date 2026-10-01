@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CSC",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "S": {
+      "item": "genesis:resonance_shard"
+    }
+  },
+  "result": {
+    "item": "genesis:resonant_alloy",
+    "count": 2
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "name": "Adaptaris Absolute",
+  "icon": "genesis:genesis_core",
+  "background": "minecraft:textures/block/blackstone.png",
+  "abilities": {
+    "armor": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.armor",
+      "amount": 10,
+      "operation": 0,
+      "uuid": "21fb4f3e-0d76-50b9-b2a4-b6992ef664b2",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "speed": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": -0.01,
+      "operation": 0,
+      "uuid": "b343ed1a-8856-5b49-a47e-cd6cb8eb8be4",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "damage": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": 5,
+      "operation": 0,
+      "uuid": "1ba48309-3977-5d4b-ab77-ce411fc7fb28",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "guard": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.knockback_resistance",
+      "amount": 0.8,
+      "operation": 0,
+      "uuid": "0156d9c3-139a-5301-b243-f45e54bc40ce",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_shield"
+          }
+        ]
+      }
+    },
+    "jump": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:jump_power",
+      "amount": 1.1,
+      "operation": 0,
+      "uuid": "4ca66890-8e6e-520f-9e9b-a8b3d5437615",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_leap"
+          }
+        ]
+      }
+    },
+    "leap": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:leaping",
+      "amount": 1.5,
+      "operation": 0,
+      "uuid": "976b4cb0-fbcd-5066-93c0-4e9b6bb0e4b8",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_leap"
+          }
+        ]
+      }
+    },
+    "fall": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:fall_resistance",
+      "amount": 2,
+      "operation": 0,
+      "uuid": "35ddaf3c-0992-5a00-a32c-82cce5facc59",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "counter_spore": {
+      "type": "palladium:projectile",
+      "entity_type": "palladium:custom_projectile",
+      "velocity": 2.4,
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:false"
+          }
+        ]
+      },
+      "entity_data": {
+        "Damage": 6,
+        "Gravity": 0.025,
+        "Lifetime": 80,
+        "DieOnEntityHit": true,
+        "DieOnBlockHit": true,
+        "Appearances": [
+          {
+            "Type": "item",
+            "Item": "minecraft:crimson_fungus"
+          }
+        ],
+        "Tags": [
+          "genesis_projectile"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.genesis.core.CoreStateTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-10-01T01:24:07" hostname="aa88d6255bc7" time="0.05">
+  <properties/>
+  <testcase name="regenerationHasHardCap()" classname="dev.genesis.core.CoreStateTest" time="0.019"/>
+  <testcase name="colonyNeedsItsOwnScan()" classname="dev.genesis.core.CoreStateTest" time="0.002"/>
+  <testcase name="energyReachesZeroWithoutUnderflow()" classname="dev.genesis.core.CoreStateTest" time="0.0"/>
+  <testcase name="repeatedScanCannotFarmXp()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <testcase name="recoverySurvivesRevertAndCannotBeShortened()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <testcase name="absoluteRequiresUnlockAndCorrectSpecies()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <testcase name="unlockRequiresBothDiscoveryAndLevel()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <testcase name="newCoreStartsWithOneRealMatrix()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <testcase name="onlyTwoAdaptationSlotsAndNoInstantImmunity()" classname="dev.genesis.core.CoreStateTest" time="0.002"/>
+  <testcase name="changingFormClearsAdaptationsButKeepsCooldowns()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <testcase name="abilityCostsAndTicksAreAuthoritative()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <testcase name="invalidSlotsAndPacketNumbersCannotCast()" classname="dev.genesis.core.CoreStateTest" time="0.005"/>
+  <testcase name="foreignPowerIdsAreNeverOwned()" classname="dev.genesis.core.CoreStateTest" time="0.006"/>
+  <testcase name="unimplementedSpeciesAlwaysRejected()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <testcase name="xpDoesNotOverflow()" classname="dev.genesis.core.CoreStateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

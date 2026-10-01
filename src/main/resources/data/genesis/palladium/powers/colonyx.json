@@ -1,0 +1,85 @@
+{
+  "name": "Colonyx",
+  "icon": "genesis:genesis_core",
+  "background": "minecraft:textures/block/blackstone.png",
+  "abilities": {
+    "armor": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.armor",
+      "amount": 3,
+      "operation": 0,
+      "uuid": "fe4361ee-817c-5e5e-b11b-f942f92b9065",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "speed": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": 0.025,
+      "operation": 0,
+      "uuid": "c14683ce-615a-5cca-9ddc-a762d2a54a97",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "damage": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": 1,
+      "operation": 0,
+      "uuid": "e2984587-d248-5552-8961-b18b8273ed89",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "guard": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.knockback_resistance",
+      "amount": 0.8,
+      "operation": 0,
+      "uuid": "0156d9c3-139a-5301-b243-f45e54bc40ce",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_shield"
+          }
+        ]
+      }
+    },
+    "bloom_damage": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": 3,
+      "operation": 0,
+      "uuid": "72ede2ec-f445-58be-9ffb-2df4b6bc8b65",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_bloom"
+          }
+        ]
+      }
+    },
+    "bloom_speed": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": 0.025,
+      "operation": 0,
+      "uuid": "ace2c03c-6329-5bdc-a15f-391d3cc1af24",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_bloom"
+          }
+        ]
+      }
+    }
+  }
+}

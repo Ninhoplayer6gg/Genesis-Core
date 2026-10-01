@@ -1,0 +1,94 @@
+{
+  "name": "Adaptaris",
+  "icon": "genesis:genesis_core",
+  "background": "minecraft:textures/block/blackstone.png",
+  "abilities": {
+    "armor": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.armor",
+      "amount": 8,
+      "operation": 0,
+      "uuid": "782664e2-fdae-50ab-9d38-524b67c9c405",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "speed": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": -0.015,
+      "operation": 0,
+      "uuid": "98176bdd-a522-51d2-a74f-15900dcf9f98",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "damage": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": 4,
+      "operation": 0,
+      "uuid": "ae7429ef-0153-5be6-a644-ff184b7c0956",
+      "hidden": true,
+      "hidden_in_bar": true
+    },
+    "guard": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "minecraft:generic.knockback_resistance",
+      "amount": 0.8,
+      "operation": 0,
+      "uuid": "0156d9c3-139a-5301-b243-f45e54bc40ce",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_shield"
+          }
+        ]
+      }
+    },
+    "jump": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:jump_power",
+      "amount": 1.1,
+      "operation": 0,
+      "uuid": "4ca66890-8e6e-520f-9e9b-a8b3d5437615",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_leap"
+          }
+        ]
+      }
+    },
+    "leap": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:leaping",
+      "amount": 1.5,
+      "operation": 0,
+      "uuid": "976b4cb0-fbcd-5066-93c0-4e9b6bb0e4b8",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "genesis_leap"
+          }
+        ]
+      }
+    },
+    "fall": {
+      "type": "palladium:attribute_modifier",
+      "attribute": "palladium:fall_resistance",
+      "amount": 2,
+      "operation": 0,
+      "uuid": "35ddaf3c-0992-5a00-a32c-82cce5facc59",
+      "hidden": true,
+      "hidden_in_bar": true
+    }
+  }
+}

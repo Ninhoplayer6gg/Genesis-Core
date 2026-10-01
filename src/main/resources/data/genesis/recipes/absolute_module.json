@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AMA",
+    "NVN",
+    "AMA"
+  ],
+  "key": {
+    "A": {
+      "item": "genesis:resonant_alloy"
+    },
+    "M": {
+      "item": "genesis:memory_fragment"
+    },
+    "N": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "V": {
+      "item": "genesis:matrix_vessel"
+    }
+  },
+  "result": {
+    "item": "genesis:absolute_module",
+    "count": 1
+  }
+}

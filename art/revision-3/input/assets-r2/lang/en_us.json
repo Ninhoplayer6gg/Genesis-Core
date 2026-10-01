@@ -1,0 +1,18 @@
+{
+  "item.genesis.genesis_core": "Núcleo do Gênesis",
+  "item.genesis.resonance_shard": "Fragmento de ressonância",
+  "item.genesis.resonant_alloy": "Liga de ressonância",
+  "item.genesis.memory_fragment": "Fragmento mnemônico",
+  "item.genesis.matrix_vessel": "Cápsula de matriz",
+  "item.genesis.absolute_module": "Retículo absoluto",
+  "block.genesis.resonance_ore": "Minério de ressonância",
+  "block.genesis.mnemonic_archive": "Arquivo mnemônico",
+  "key.categories.genesis": "Genesis Core",
+  "key.genesis.menu": "Abrir Núcleo do Gênesis",
+  "key.genesis.database": "Database / Diagnóstico",
+  "key.genesis.ability1": "Habilidade 1 / Scanner",
+  "key.genesis.ability2": "Habilidade 2 / Radar",
+  "key.genesis.ability3": "Habilidade 3 / Escudo",
+  "key.genesis.ultimate": "Ultimate",
+  "key.genesis.movement": "Movimento especial"
+}
