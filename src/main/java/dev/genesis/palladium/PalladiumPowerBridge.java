@@ -38,7 +38,11 @@ public final class PalladiumPowerBridge {
         flag(p,"genesis_climb",d.movementTicks>0&&d.state.form.equals("colonyx"));
         flag(p,"genesis_bloom",d.bloomTicks>0&&d.state.form.equals("colonyx"));
     }
-    private static void flag(ServerPlayer p,String tag,boolean enabled) {if(enabled)p.addTag(tag);else p.removeTag(tag);}
+    private static void flag(ServerPlayer p,String tag,boolean enabled) {
+        boolean present=p.getTags().contains(tag);
+        if(enabled&&!present)p.addTag(tag);
+        else if(!enabled&&present)p.removeTag(tag);
+    }
     public static void tickForValidation(ServerPlayer p) { PowerManager.getPowerHandler(p).ifPresent(h->h.tick()); }
     public static void clearFlags(ServerPlayer p) {for(String t:List.of("genesis_shield","genesis_lift","genesis_leap","genesis_climb","genesis_bloom"))p.removeTag(t);}
 }

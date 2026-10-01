@@ -33,8 +33,8 @@ public final class CoreEvents {
         if(d.movementTicks>0&&s.form.equals("colonyx")&&p.horizontalCollision&&!p.isShiftKeyDown()){var v=p.getDeltaMovement();p.setDeltaMovement(v.x,.16,v.z);p.fallDistance=0;p.hurtMarked=true;}
         if(p.tickCount%20==0) {
             s.energySecond(CoreConfig.DRAIN.get(),CoreConfig.REGEN.get());
-            if(s.transformed()&&s.energy<=0){TransformationManager.revert(p);return;}
             if(d.movementTicks>0) {s.energy=Math.max(0,s.energy-1.5);if(s.energy==0)d.movementTicks=0;}
+            if(s.transformed()&&s.energy<=0){TransformationManager.revert(p);return;}
             if(d.dirty)CoreNetwork.syncOwner(p);else CoreNetwork.syncVitals(p);
         }
         if(p.tickCount%100==0) {

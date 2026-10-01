@@ -21,7 +21,10 @@ public final class SpeciesAnimatable implements GeoReplacedEntity {
                 var d=ClientState.data(p.getUUID());
                 animation=d.animationTicks>0?switch(d.animation){
                     case 2 -> "guard";case 3 -> "ultimate";case 4 -> "adaptation_scan";
-                    case 5 -> "adaptation_complete";case 6 -> "transformation";default -> "attack";
+                    case 5 -> "adaptation_complete";case 6 -> "transformation";case 7 -> "jump";
+                    case 8 -> "regeneration";case 9 -> "magnetic_polarity";case 10 -> "magnetic_shard";
+                    case 11 -> "magnetic_lift";case 12 -> "colonial_lance";case 13 -> "colony_regroup";
+                    case 14 -> "colony_climb";default -> "attack";
                 }:p.hurtTime>0?"hurt":!p.onGround()?(p.getDeltaMovement().y>0?"jump":"fall"):state.isMoving()?(p.isSprinting()?"run":"walk"):"idle";
             }
             return state.setAndContinue(RawAnimation.begin().thenLoop(animation));

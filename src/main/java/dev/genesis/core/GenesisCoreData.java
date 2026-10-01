@@ -29,7 +29,7 @@ public final class GenesisCoreData {
         var n=new CompoundTag();n.putBoolean("VisualOnly",true);n.putBoolean("Installed",state.installed);
         n.putString("Form",state.form);n.putBoolean("Absolute",state.absolute);n.putInt("Preset",state.preset);
         var a=new CompoundTag();state.adaptations.forEach(a::putDouble);n.put("Adaptations",a);
-        n.putInt("Shield",shieldTicks);n.putInt("Bloom",bloomTicks);n.putInt("Animation",animation);n.putInt("AnimationTicks",animationTicks);return n;
+        n.putInt("Shield",shieldTicks);n.putInt("Movement",movementTicks);n.putInt("Bloom",bloomTicks);n.putInt("Animation",animation);n.putInt("AnimationTicks",animationTicks);return n;
     }
     public void load(CompoundTag n) {
         CoreState s=new CoreState();s.installed=n.getBoolean("Installed");s.xp=Math.max(0,Math.min(1000000,n.getInt("Xp")));

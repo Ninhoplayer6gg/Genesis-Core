@@ -41,7 +41,10 @@ public final class TransformationManager {
         var d=GenesisCoreData.get(p);d.clearTransient();PalladiumPowerBridge.clearFlags(p);
         var s=d.state;var species=SpeciesRegistry.get(s.form);
         if(s.transformed()&&(species==null||s.energy<=0||!s.unlocked.contains(s.form)))s.leave(cooldown(s));
-        if(!PalladiumPowerBridge.replace(p,s.transformed()?species.powerId(s.absolute):""))s.leave(cooldown(s));
+        if(s.transformed()&&!PalladiumPowerBridge.replace(p,species.powerId(s.absolute))) {
+            s.leave(cooldown(s));
+            PalladiumPowerBridge.replace(p,"");
+        } else if(!s.transformed()) PalladiumPowerBridge.replace(p,"");
         p.refreshDimensions();CoreNetwork.sync(p);
     }
     public static void pulse(ServerPlayer p) {
